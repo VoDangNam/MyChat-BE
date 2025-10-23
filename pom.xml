@@ -10,7 +10,7 @@
 
     <groupId>com.example</groupId>
     <artifactId>my-chat</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2-SNAPSHOT</version>
     <name>My Chat Application</name>
     <description>A real-time chat application using Spring Boot and WebSocket.</description>
     <url>https://github.com/your-username/my-chat</url>
