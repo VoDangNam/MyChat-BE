@@ -51,6 +51,7 @@ public class AuthController {
 
     @PostMapping("/login")
     public ResponseEntity<?> loginRepose(@RequestBody LoginRequest request){
+        // FORCE REBUILD 123
        User user = userRepository.findByUsername(request.getUsername());
        if(user == null){
            throw new RuntimeException("not found user");
