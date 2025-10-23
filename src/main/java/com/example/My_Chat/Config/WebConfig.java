@@ -6,7 +6,7 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
-public class WebConfig {
+public class WebConfig implements WebMvcConfigurer{
 
     @Bean
     public WebMvcConfigurer corsConfigurer() {
@@ -19,5 +19,14 @@ public class WebConfig {
                         .allowCredentials(true);
             }
         };
+    }
+
+    @Override
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/api/**") // Chỉ cho phép các đường dẫn /api/
+                .allowedOrigins("https://ten-mien-react-cua-ban.onrender.com") // <--- CHỖ NÀY SẼ CẬP NHẬT Ở BƯỚC 4
+                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+                .allowedHeaders("*")
+                .allowCredentials(true);
     }
 }
