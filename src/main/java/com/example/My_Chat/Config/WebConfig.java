@@ -24,7 +24,7 @@ public class WebConfig implements WebMvcConfigurer{
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/api/**") // Chỉ cho phép các đường dẫn /api/
-                .allowedOrigins("https://ten-mien-react-cua-ban.onrender.com") // <--- CHỖ NÀY SẼ CẬP NHẬT Ở BƯỚC 4
+                .allowedOrigins("https://my-frontend-rlt3.onrender.com") // <--- CHỖ NÀY SẼ CẬP NHẬT Ở BƯỚC 4
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
                 .allowCredentials(true);
